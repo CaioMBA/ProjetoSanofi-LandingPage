@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Styles/common.css" />
-    <title>Projeto Sanofi: Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./Scripts/Animation.js"></script>
+    <title>Projeto Sanofi</title>
   </head>
   <body>
     <nav>
@@ -15,7 +23,8 @@
       <ul>
         <li><a href="#MainMenu">Home</a></li>
         <li><a href="#About">Sobre</a></li>
-        <li><a href="./contact.html">Contato</a></li>
+        <li><a href="#Objective">Objetivo</a></li>
+        <li><a href="#Sugestions">Sugestões</a></li>
       </ul>
       <img src="./Assets/Images/OFA_TECH_EMBLEM.png" alt="One for All Logo" />
     </nav>
@@ -31,8 +40,96 @@
         <h2>A ideia de um micro WMS</h2>
       </header>
     </section>
+    <section id="Objective">
+      <h1>Objetivos</h1>
+      <ul class="objective-cards">
+        <li>
+          <div class="card">
+            <div class="img-wraper">
+              <img src="./Assets/Images/ProductRegistration.jpeg" alt="" />
+            </div>
+            <div class="card-text">
+              <h2>Cadastros Gerais</h2>
+              <p>
+                Será possível cadastrar produtos tanto físicos quanto digitais,
+                facilitando assim a dinâmica e a flexibilidade do sistema.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="img-wraper">
+              <img src="./Assets/Images/ControleEstoque.png" alt="" />
+            </div>
+            <div class="card-text">
+              <h2>Controle de Estoque</h2>
+              <p>
+                Rastreabilidade e controle de produtos cadastrados e em estoque,
+                para que seja possível atender as necessidades com maior
+                velocidade
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="img-wraper">
+              <img src="./Assets/Images/OrderProduct.jpeg" alt="" />
+            </div>
+            <div class="card-text">
+              <h2>Pedidos | Chamados</h2>
+              <p>
+                Será possível realizar pedidos e chamados para que a equipe
+                responsável possa atender as demandas com maior eficiência
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="Sugestions">
+      <h1>Sugestões</h1>
+      <div class="container">
+        <div class="header">
+          <h2>Envie uma sugestão</h2>
+        </div>
+        <form id="form" class="form">
+          <div class="form-control">
+            <label for="Nome">Seu Nome</label>
+            <input type="text" id="Nome" placeholder="Escreva seu nome..." />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+          <div class="form-control">
+            <label for="Email">E-mail</label>
+            <input
+              type="text"
+              id="Email"
+              placeholder="Escreva seu e-mail para que possamos contata-lo"
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+          <div class="form-control">
+            <label for="ideia">Ideia | Sugestão</label>
+            <input type="text" id="ideia" placeholder="Digite sua sugestão" />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
   </body>
   <footer>
     <p>&copy; 2024 Projeto Sanofi. Todos os direitos reservados.</p>
   </footer>
+  <script
+    src="https://kit.fontawesome.com/f9e19193d6.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
