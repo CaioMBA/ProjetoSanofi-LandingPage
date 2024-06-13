@@ -73,11 +73,12 @@ nav {
   justify-content: space-between;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  font-size: 3rem;
+  font-size: 3vw;
   z-index: 1000;
 }
 nav img {
-  height: 10vh;
+  max-height: 10vh;
+  max-width: 10vw;
   margin-left: 2vw;
   margin-right: 2vw;
 }
@@ -118,6 +119,7 @@ footer {
 #About ul {
   display: flex;
 }
+
 #About li {
   text-align: center;
   justify-content: center;
@@ -129,7 +131,7 @@ footer {
 }
 
 #About li a {
-  font-size: 1rem;
+  font-size: 1vw;
   font-family: var(--font-subtitle);
   text-align: center;
   margin-top: 1vh;
@@ -334,4 +336,38 @@ footer {
 
 .btn_default:hover {
   background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    overflow-y: scroll;
+  }
+  .objective-cards {
+    grid-template-columns: repeat(1, 33%);
+  }
+  .card {
+    min-width: 50vw;
+    transition: min-width 0.5s;
+  }
+  .card:hover {
+    min-width: 80vw;
+  }
+
+  .container {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    overflow-y: scroll;
+  }
+  .container {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 }
