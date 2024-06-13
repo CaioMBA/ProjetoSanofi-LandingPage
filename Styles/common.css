@@ -39,6 +39,7 @@ section {
 section h1 {
   text-align: center;
   margin-bottom: 5vh;
+  margin-top: 3vh;
 }
 
 h1 {
@@ -54,8 +55,13 @@ h2 {
   font-size: 2rem;
   font-weight: 900;
   color: var(--secondary-color);
-  margin-left: 5vw;
   margin-top: 1vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-family: var(--font-subtitle);
 }
 
 nav {
@@ -109,6 +115,28 @@ footer {
   width: 100%;
 }
 
+#About ul {
+  display: flex;
+}
+#About li {
+  text-align: center;
+  justify-content: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+
+  max-width: 30vw;
+  max-height: 33vw;
+}
+
+#About li a {
+  font-size: 1rem;
+  font-family: var(--font-subtitle);
+  text-align: center;
+  margin-top: 1vh;
+  max-width: 10vw;
+  margin-left: 10vw;
+}
+
 .objective-cards {
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
@@ -130,6 +158,7 @@ footer {
   transition: opacity 0.5s;
   margin-top: 5vh;
   justify-content: center;
+  text-align: center;
   transition: max-width 0.5s;
   overflow-y: hidden;
 }
@@ -145,17 +174,18 @@ footer {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.5s;
+  justify-self: center;
 }
 
 .card-text {
   position: absolute;
   justify-content: center;
+  text-align: center;
   top: 12vh;
   opacity: 0;
   transition: opacity 0.5s, top 0.5s;
   color: var(--white-color);
   text-shadow: var(--black-color);
-  overflow: hidden;
 }
 
 .card h2 {
@@ -163,11 +193,6 @@ footer {
   font-family: var(--font-title);
   text-align: center;
   padding-top: 5vh;
-}
-
-.card a {
-  font-size: 1.5rem;
-  font-family: var(--font-subtitle);
 }
 
 .card p {
@@ -190,27 +215,20 @@ footer {
 }
 
 .container {
-  margin-left: 30%;
+  margin-left: 30vw;
   background-color: var(--white-color);
-  border-radius: 20px;
+  border-radius: 2vh;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   width: 40vw;
-  height: 60vh;
+  height: 63vh;
   font-family: var(--font-subtitle);
   opacity: 0.9;
 }
 
 .header {
   background-color: var(--light-grey-color);
-  padding: 20px;
+  padding: 2vh;
   opacity: 1;
-}
-.header input {
-  width: 80%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid var(--primary-color);
-  margin: 10px;
 }
 
 .header h2 {
@@ -219,34 +237,34 @@ footer {
 }
 
 .form {
-  padding: 2rem;
+  padding: 2vh;
 }
 
 .form-control {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.7rem;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
   position: relative;
 }
 
 .form-control label {
   display: inline-block;
-  margin-bottom: 0.1rem;
+  margin-bottom: 1vh;
   color: var(--primary-color);
 }
 
 .form-control input {
   border: 2px solid var(--white-color);
   display: block;
-  border-radius: 1rem;
-  font-size: 14px;
+  border-radius: 1vh;
+  font-size: 1.4vh;
   width: 100%;
   padding: 1rem;
 }
 
 .form-control i {
   position: absolute;
-  top: 45px;
-  right: 10px;
+  top: 4.5vh;
+  right: 1vw;
   visibility: hidden;
 }
 
@@ -266,6 +284,7 @@ footer {
   width: 100%;
   border-radius: 10px;
   padding: 10px;
+  height: 7vh;
 }
 
 .form button:hover {
@@ -295,4 +314,24 @@ footer {
 .form-control.error small {
   color: red;
   visibility: visible;
+}
+
+.btn_default {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 14px;
+  max-width: 7vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  color: var(--white-color);
+}
+
+.btn_default:hover {
+  background-color: var(--secondary-color);
 }
