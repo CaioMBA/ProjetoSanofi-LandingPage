@@ -15,14 +15,17 @@
   </head>
   <body>
     <nav>
-      <img
-        src="./Assets/Images/Sanofi_Logo_Nome.png"
-        alt="Projeto Sanofi Logo"
-      />
+      <a href="https://www.sanofi.com.br/">
+        <img
+          src="./Assets/Images/Sanofi_Logo_Nome.png"
+          alt="Projeto Sanofi Logo"
+        />
+      </a>
+
       <ul>
         <li><a href="#MainMenu">Home</a></li>
         <li><a href="#About">Sobre</a></li>
-        <li><a href="#Objective">Objetivo</a></li>
+        <li><a href="#Objective">Objetivos</a></li>
         <li><a href="#Sugestions">Sugestões</a></li>
       </ul>
       <a href="https://ofatechnology.postman.co/home"
@@ -32,11 +35,63 @@
     <section id="MainMenu">
       <header>
         <h1>Projeto Sanofi</h1>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="image-container">
+              <a href="https://www.linkedin.com/in/caio-mba/">
+                <img
+                  src="https://media.licdn.com/dms/image/C4E03AQFJkNpHI7Ly_w/profile-displayphoto-shrink_200_200/0/1646998653728?e=1723680000&v=beta&t=I3zDqd7t6HXnO2j3VGakjYLpqrcqSaBHE0vSPpsdDvw"
+                  alt="Caio Manoel Bezerra de Araujo"
+                />
+              </a>
+              <span>Caio Manoel Bezerra de Araujo</span>
+              <a href="https://www.linkedin.com/in/lucasfmartins17/">
+                <img
+                  src="https://media.licdn.com/dms/image/D4D03AQGQGtszJUyd9w/profile-displayphoto-shrink_200_200/0/1714679733590?e=1723680000&v=beta&t=nmzOgHLbUKdwF8Ddk14UyOuaJJIF_A_Azl6h6oykoZQ"
+                  alt="Lucas Ferras Martins"
+                />
+              </a>
+              <span>Lucas Ferras Martins</span>
+              <a href="https://www.linkedin.com/in/luana-dias-1ab95b220/">
+                <img
+                  src="https://media.licdn.com/dms/image/D4D03AQE4SK8I8scpAg/profile-displayphoto-shrink_200_200/0/1716248693884?e=1723680000&v=beta&t=zBTqeibsQWTlufkpbyaUOPfStvE10chJaMeL1ZiKmvg"
+                  alt="Luana Domingos Dias"
+                />
+              </a>
+              <span>Luana Domingos Dias</span>
+              <a href="https://www.linkedin.com/in/bruno-jin-936043234/">
+                <img
+                  src="https://media.licdn.com/dms/image/C4E03AQF3jmuq_EdNDA/profile-displayphoto-shrink_200_200/0/1647128883128?e=1723680000&v=beta&t=duUDoHBED2yDkuBKjnXNVhp7q0XHZn-kmH-wGMbvY9g"
+                  alt="Bruno Jin"
+                />
+              </a>
+              <span>Bruno Jin</span>
+              <a href="https://www.linkedin.com/in/rafaela-hitomi-348170211/">
+                <img
+                  src="https://media.licdn.com/dms/image/C4D03AQH2LbBHHF0loQ/profile-displayphoto-shrink_200_200/0/1646697024801?e=1723680000&v=beta&t=yylLk711fF7zf8YTx_tW7_sz8oYzC6wDXCz1XLN_nEA"
+                  alt="Rafaela Hitomi"
+                />
+              </a>
+              <span>Rafaela Hitomi</span>
+              <a href="https://www.linkedin.com/in/daniel-kramer-205437229/">
+                <img
+                  src="https://media.licdn.com/dms/image/D4E35AQGGE6w2e_BP6Q/profile-framedphoto-shrink_200_200/0/1716524189904?e=1718928000&v=beta&t=W8FPnxatdIzxofCcx-Nh3AxT65fpH7DeOd05pZSFFpc"
+                  alt="Daniel Kramer"
+                />
+              </a>
+              <span>Daniel Kramer</span>
+            </div>
+          </div>
+        </div>
       </header>
+      <button id="openModalBtn" class="defaultButton">
+        <i class="fa-brands fa-linkedin"> Contatos</i>
+      </button>
     </section>
     <section id="About">
       <header>
-        <h1>Introdução</h1>
+        <h1>Introdução ao Projeto</h1>
       </header>
       <ul class="info-box">
         <li>
@@ -46,7 +101,22 @@
             estoque e pedidos, com o intuito de facilitar a gestão de produtos e
             pedidos, tornando o processo mais eficiente e rápido.
           </p>
-          <a href="https://github.com/CaioMBA/ProjetoSanofi" class="btn_default"
+          <a
+            href="https://github.com/CaioMBA/ProjetoSanofi"
+            class="defaultButton"
+            ><i class="fa-brands fa-github"> GitHub</i></a
+          >
+        </li>
+        <li>
+          <h2>Micro Serviçado</h2>
+          <p>
+            A ideia é utilizar uma arquitetura de microserviços, o que facilita
+            a expansão. Isso permite um dinamismo entre o crescimento vertical e
+            horizontal da capacidade computacional.
+          </p>
+          <a
+            href="https://github.com/CaioMBA/ProjetoSanofi"
+            class="defaultButton"
             ><i class="fa-brands fa-github"> GitHub</i></a
           >
         </li>
@@ -57,53 +127,9 @@
             estoque e pedidos, com o intuito de facilitar a gestão de produtos e
             pedidos, tornando o processo mais eficiente e rápido.
           </p>
-          <a href="https://github.com/CaioMBA/ProjetoSanofi" class="btn_default"
-            ><i class="fa-brands fa-github"> GitHub</i></a
-          >
-        </li>
-        <li>
-          <h2>Micro WMS</h2>
-          <p>
-            O projeto tem como objetivo criar um sistema de gerenciamento de
-            estoque e pedidos, com o intuito de facilitar a gestão de produtos e
-            pedidos, tornando o processo mais eficiente e rápido.
-          </p>
-          <a href="https://github.com/CaioMBA/ProjetoSanofi" class="btn_default"
-            ><i class="fa-brands fa-github"> GitHub</i></a
-          >
-        </li>
-      </ul>
-      <ul class="info-box">
-        <li>
-          <h2>Micro WMS</h2>
-          <p>
-            O projeto tem como objetivo criar um sistema de gerenciamento de
-            estoque e pedidos, com o intuito de facilitar a gestão de produtos e
-            pedidos, tornando o processo mais eficiente e rápido.
-          </p>
-          <a href="https://github.com/CaioMBA/ProjetoSanofi" class="btn_default"
-            ><i class="fa-brands fa-github"> GitHub</i></a
-          >
-        </li>
-        <li>
-          <h2>Micro WMS</h2>
-          <p>
-            O projeto tem como objetivo criar um sistema de gerenciamento de
-            estoque e pedidos, com o intuito de facilitar a gestão de produtos e
-            pedidos, tornando o processo mais eficiente e rápido.
-          </p>
-          <a href="https://github.com/CaioMBA/ProjetoSanofi" class="btn_default"
-            ><i class="fa-brands fa-github"> GitHub</i></a
-          >
-        </li>
-        <li>
-          <h2>Micro WMS</h2>
-          <p>
-            O projeto tem como objetivo criar um sistema de gerenciamento de
-            estoque e pedidos, com o intuito de facilitar a gestão de produtos e
-            pedidos, tornando o processo mais eficiente e rápido.
-          </p>
-          <a href="https://github.com/CaioMBA/ProjetoSanofi" class="btn_default"
+          <a
+            href="https://github.com/CaioMBA/ProjetoSanofi"
+            class="defaultButton"
             ><i class="fa-brands fa-github"> GitHub</i></a
           >
         </li>
@@ -197,8 +223,10 @@
   <footer>
     <p>&copy; 2024 Projeto Sanofi. Todos os direitos reservados.</p>
   </footer>
+
   <script
     src="https://kit.fontawesome.com/f9e19193d6.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./Scripts/Auxiliar.js"></script>
 </html>
