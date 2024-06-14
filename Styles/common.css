@@ -273,7 +273,7 @@ footer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   width: 40vw;
   height: 63vh;
-  font-family: var(--font-subtitle);
+  font-family: var(--font-text);
   opacity: 0.9;
 }
 
@@ -322,6 +322,10 @@ footer {
 
 .form-control small {
   position: absolute;
+  color: var(--red-color);
+  background-color: var(--light-grey-color);
+  border: var(--red-color);
+  border-radius: 5px;
   bottom: 0;
   left: 0;
   visibility: hidden;
@@ -333,10 +337,12 @@ footer {
   color: var(--white-color);
   border: 2px solid var(--primary-color);
   font-size: 20px;
+  font-family: var(--font-subtitle);
   width: 100%;
   border-radius: 10px;
   padding: 10px;
   height: 7vh;
+  overflow: hidden;
 }
 
 .form button:hover {
@@ -346,25 +352,25 @@ footer {
 }
 
 .form-control.success input {
-  border-color: green;
+  border-color: var(--green-color);
 }
 
 .form-control.error input {
-  border-color: red;
+  border-color: var(--red-color);
 }
 
 .form-control.success i.fa-check-circle {
-  color: green;
+  color: var(--green-color);
   visibility: visible;
 }
 
 .form-control.error i.fa-exclamation-circle {
-  color: red;
+  color: var(--red-color);
   visibility: visible;
 }
 
 .form-control.error small {
-  color: red;
+  color: var(--red-color);
   visibility: visible;
 }
 
@@ -386,7 +392,7 @@ footer {
 }
 
 .defaultButton:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .image-container {
@@ -399,7 +405,7 @@ footer {
   max-width: 45vw;
   max-height: 45vh;
   border-radius: 20%;
-  border: 0.2vw solid var(--primary-color);
+  border: 0.2vw solid var(--blue-color);
 }
 
 .image-container span {
@@ -409,6 +415,12 @@ footer {
   max-width: 20vw;
   margin-top: 25%;
   margin-left: 5%;
+}
+
+.image-container .fa-linkedin {
+  margin-top: 20vh;
+  color: var(--blue-color);
+  background-color: transparent;
 }
 
 .modal {
@@ -439,21 +451,21 @@ footer {
   flex-direction: column;
   margin-top: 30vh;
   margin-left: 20vw;
-  border: 3px solid var(--secondary-color);
+  border: 3px solid var(--primary-color);
   border-radius: 20px;
-  background-color: var(--light-grey-color);
+  background-color: var(--dark-grey-color);
   max-width: 60vw;
   max-height: 55vh;
 }
 
 .close {
   color: var(--red-color);
+  margin-left: 58vw;
   background-color: transparent;
   font-size: 5vh;
   font-weight: bold;
   border-radius: 30%;
   max-height: 10vh;
-  padding-top: 1.7%;
   padding-bottom: 1.7%;
   z-index: 2;
   overflow: hidden;
@@ -461,8 +473,10 @@ footer {
 
 .close:hover,
 .close:focus {
+  color: red;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.3s color;
 }
 
 @media only screen and (max-width: 800px) {
@@ -473,8 +487,43 @@ footer {
   nav ul li a {
     font-size: 3vw;
   }
+  #MainMenu h1 {
+    font-size: 5vw;
+  }
+  #MainMenu h2 {
+    font-size: 4vw;
+  }
+  #MainMenu main {
+    flex-direction: column;
+  }
+
+  aside {
+    margin-right: 0;
+    max-width: 80vw;
+  }
+
+  aside p {
+    font-size: 2.5vw;
+  }
+
+  article img {
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+
   #About li {
     flex-basis: 100vw;
+  }
+
+  #About h1 {
+    font-size: 4vw;
+  }
+  #About h2 {
+    font-size: 3vw;
+  }
+
+  #About li p {
+    font-size: 2vw;
   }
   .objective-cards {
     grid-template-columns: repeat(1, 33%);
@@ -490,6 +539,22 @@ footer {
   .container {
     width: 80vw;
     margin-left: 10vw;
+  }
+  .modal-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    margin-top: 10vh;
+    margin-left: 5vw;
+  }
+  .modal-content ul li {
+    flex: 1 1 100vw;
+  }
+  .image-container span {
+    font-size: 3vw;
+    max-width: 40vw;
+  }
+  .close {
+    margin-left: 90vw;
   }
 }
 
