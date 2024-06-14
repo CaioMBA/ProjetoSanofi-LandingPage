@@ -98,35 +98,42 @@ async function callNotifyAPI(mail, msg, omitir = true) {
               <p>Your Name</p>    
               </footer>  
               </div></body></html>`;
-
-  await fetch("http://maincaitoserver.ddns.net:7002/api/Notification/Send", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      mails: [
-        {
-          mailDestinations: mail,
-          subject: "Sugestão do forms da LandingPage",
-          msg: mailbase,
-        },
-      ],
-      phones: null,
-    }),
-  }).then((response) => {
-    if (response.status == 200) {
-      if (omitir) {
-        console.log("Mensagem enviada com sucesso!");
+  try {
+    await fetch("http://maincaitoserver.ddns.net:7002/api/Notification/Send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        mails: [
+          {
+            mailDestinations: mail,
+            subject: "Sugestão do forms da LandingPage",
+            msg: mailbase,
+          },
+        ],
+        phones: null,
+      }),
+    }).then((response) => {
+      if (response.status == 200) {
+        if (omitir) {
+          console.log("Mensagem enviada com sucesso!");
+        } else {
+          alert("Mensagem enviada com sucesso!");
+        }
       } else {
-        alert("Mensagem enviada com sucesso!");
+        if (omitir) {
+          console.log(response.body);
+        } else {
+          alert("Erro ao enviar mensagem!");
+        }
       }
+    });
+  } catch {
+    if (omitir) {
+      console.log("Erro ao enviar mensagem!");
     } else {
-      if (omitir) {
-        console.log(response.body);
-      } else {
-        alert("Erro ao enviar mensagem!");
-      }
+      alert("Erro ao enviar mensagem!");
     }
-  });
+  }
 }
