@@ -2,7 +2,13 @@ const form = document.getElementById("form");
 const Nome = document.getElementById("Nome");
 const Email = document.getElementById("Email");
 const ideia = document.getElementById("ideia");
-const TeamMails = ["caiombaraujo@gmail.com", "lucasfm179@gmail.com"];
+const TeamMails = [
+  "caiombaraujo@gmail.com",
+  "lucasfm179@gmail.com",
+  "Brunocyjin98@gmail.com",
+  "rafaelaosugi@hotmail.com",
+  "luanaddias06@gmail.com",
+];
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
