@@ -129,11 +129,12 @@ async function callNotifyAPI(mail, msg, omitir = true) {
         }
       }
     });
-  } catch {
+  } catch (error) {
+    errorMsg = `Erro ao enviar mensagem! erro: ${error.message}`;
     if (omitir) {
-      console.log("Erro ao enviar mensagem!");
+      console.log(errorMsg);
     } else {
-      alert("Erro ao enviar mensagem!");
+      alert(errorMsg);
     }
   }
 }
