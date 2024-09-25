@@ -110,6 +110,7 @@ async function callNotifyAPI(mail, msg, omitir = true) {
             mailDestinations: mail,
             subject: "Sugestão do forms da LandingPage",
             msg: mailbase,
+            attachments: null
           },
         ],
         phones: null,
